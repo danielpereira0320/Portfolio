@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio | Your Name</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet" />
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Inter', sans-serif;
+            background: #fafafa;
+            color: #222;
+        }
+        header {
+            padding: 2rem 4rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #ffffff;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+            position: sticky;
+            top: 0;
+            z-index: 999;
+        }
+        nav a {
+            margin-left: 2rem;
+            text-decoration: none;
+            color: #444;
+            font-weight: 500;
+        }
+        nav a:hover {
+            color: #000;
+        }
+        .container {
+            width: min(1100px, 90%);
+            margin: auto;
+            padding: 4rem 0;
+        }
+        .hero {
+            text-align: center;
+            padding: 6rem 0;
+        }
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+        .hero p {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            max-width: 700px;
+            margin: auto;
+        }
+        .section-title {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+        /* Skills */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1.5rem;
+        }
+        .skill-card {
+            background: #fff;
+            padding: 1.5rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+            text-align: center;
+            font-weight: 500;
+        }
+        /* Projects */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        .project-card {
+            background: #fff;
+            border-radius: 14px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            transition: transform 0.2s ease;
+        }
+        .project-card:hover {
+            transform: translateY(-6px);
+        }
+        .project-card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
+        .project-card .content {
+            padding: 1.2rem 1.5rem;
+        }
+        .project-card h3 {
+            margin: 0 0 0.5rem;
+        }
+        .project-card p {
+            font-size: 0.95rem;
+            line-height: 1.4;
+        }
+        /* Resume */
+        .resume-embed {
+            margin-top: 2rem;
+            display: flex;
+            justify-content: center;
+        }
+        .resume-embed iframe {
+            width: 100%;
+            height: 700px;
+            border: none;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        footer {
+            text-align: center;
+            padding: 2rem;
+            background: #fff;
+            margin-top: 4rem;
+            color: #444;
+            border-top: 1px solid #eee;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo" style="font-weight:700;font-size:1.3rem;">Daniel Pereira</div>
+        <nav>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#resume">Resume</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Hello, I'm Daniel Pereira</h1>
+        <p>I am a recent graduate who specializes in Machine Learning and Data Analytics, I am passionate about the different AI technologies and have experience working on multiple Generative AI frameworks.</p>
+    </section>
+
+    <section id="skills" class="container">
+        <h2 class="section-title">Skills</h2>
+        <div class="skills-grid">
+            <div class="skill-card">Python</div>
+            <div class="skill-card">PowerBI</div>
+            <div class="skill-card">SQL</div>
+            <div class="skill-card">Machine Learning</div>
+            <div class="skill-card">Docker</div>
+            <div class="skill-card">Ollama</div>
+            <div class="skill-card">ChromaDB</div>
+            <div class="skill-card">Java</div>
+
+        </div>
+    </section>
+
+    <section id="projects" class="container">
+        <h2 class="section-title">Projects</h2>
+        <div class="projects-grid">
+            <div class="project-card">
+                <img src="financial_ratios.png" alt="Project Image" />
+                <div class="content">
+                    <h3>Analysis of Financial Ratios in Predicting Company Bankruptcy</h3>
+                    <p>An Academic Research Project on the applications of Financial Ratios. The study included preprocessing the data before analysing which Financial Ratios are best suited for predicting bankruptcy. A detailed Machine Learning Pipeline using multiple machine learning algorithms.</p>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <img src="https://via.placeholder.com/500x300" alt="Project Image" />
+                <div class="content">
+                    <h3>Project Title</h3>
+                    <p>.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="resume" class="container">
+        <h2 class="section-title">My Resume</h2>
+        <div class="resume-embed">
+            <!-- Replace resume.pdf with the path to your file -->
+            <iframe src="https://docs.google.com/document/d/1gjXuu2uupHLyGih7oNeE4V2fUicoEi53Tm0Wal1xBnc/edit?usp=sharing"></iframe>
+        </div>
+    </section>
+
+    <footer>
+        © 2025 Your Name. All rights reserved.
+    </footer>
+</body>
+</html>
