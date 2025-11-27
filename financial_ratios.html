@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Analysis of Financial Ratios in Predicting Company Bankruptcy</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet" />
+<style>
+        table {
+    border-collapse: collapse;
+    width: 60%;
+    margin: 20px 0;
+    font-family: Arial, sans-serif;
+}
+th, td {
+    border: 1px solid #888;
+    padding: 8px 12px;
+    text-align: center;
+}
+caption {
+    margin-bottom: 10px;
+    font-size: 1.2em;
+}
+thead th {
+    background-color: #f0f0f0;
+}
+
+body {
+margin: 0;
+padding: 2rem;
+font-family: 'Inter', sans-serif;
+background: #fafafa;
+color: #222;
+}
+.container {
+max-width: 900px;
+margin: auto;
+}
+.back-btn {
+display: inline-block;
+margin-bottom: 2rem;
+padding: 0.6rem 1.2rem;
+background: #eee;
+border-radius: 8px;
+text-decoration: none;
+color: #333;
+font-weight: 500;
+transition: background 0.2s;
+}
+.back-btn:hover {
+background: #ddd;
+}
+h1 {
+font-size: 2.2rem;
+margin-bottom: 1rem;
+}
+p {
+line-height: 1.6;
+font-size: 1.1rem;
+}
+img {
+width: 100%;
+border-radius: 10px;
+margin: 1.5rem 0;
+}
+</style>
+</head>
+<body>
+<div class="container">
+<a href="index.html" class="back-btn">← Back to Portfolio</a>
+
+
+<h1>Analysis of Financial Ratios in Predicting Company Bankruptcy</h1>
+<p>A research project that focuses on the following objectives:
+    <ul><li>Analyzing the role of financial ratios in bankruptcy prediction.</li>
+    <li>Identifying the most effective ratios and their predictive accuracy.</li>
+<li>Building machine learning models for early-stage prediction.</li></ul>
+</p>
+
+
+<img src="resources/financial_ratios.png" alt="Project Screenshot" />
+<h2>Project Methodology</h2>
+<h3>Dataset</h3>
+<a href="https://www.google.com/url?q=https%3A%2F%2Fwww.kaggle.com%2Fdatasets%2Futkarshx27%2Famerican-companies-bankruptcy-prediction-dataset">Link to the US Company Bankruptcy Prediction Dataset (1999–2018)
+</a>
+<h3>Code</h3>
+<a href="https://colab.research.google.com/drive/18PAsrvHuQc4hecP_Hdza7MmePc3YOFLC?usp=sharing">Link to the Google Colab Notebook</a>
+<h3>Research Paper</h3>
+<a href="https://docs.google.com/document/d/1-SDjL4j2lJ13752ftLnLjF8vaYSH8N0TWZV4PhUVrS8/edit?usp=sharing">Documentation</a>
+<h2>Observations</h2>
+<table>
+    <caption><strong>Model Evaluation</strong></caption>
+    <thead>
+        <tr>
+            <th>Algorithm</th>
+            <th>Accuracy</th>
+            <th>Precision</th>
+            <th>Recall</th>
+            <th>F1 Score Loss</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Bernoulli Naive Bayes</td>
+            <td>61%</td>
+            <td>62%</td>
+            <td>58%</td>
+            <td>60%</td>
+        </tr>
+                <tr>
+            <td>K Neighbors Classifier</td>
+            <td>87%</td>
+            <td>80%</td>
+            <td>90%%</td>
+            <td>89%</td>
+        </tr>
+        <tr>
+            <td>Logistic Regression</td>
+            <td>59%%</td>
+            <td>58%</td>
+            <td>62%%</td>
+            <td>60%</td>
+        </tr>
+        <tr>
+            <td>Decision Tree</td>
+            <td>83%</td>
+            <td>83%</td>
+            <td>86%</td>
+            <td>84%</td>
+        </tr>
+        <tr>
+            <td>Random Forest</td>
+            <td>93%</td>
+            <td>92%</td>
+            <td>93%</td>
+            <td>93%</td>
+        </tr>
+        <tr>
+            <td>ADA Boosting</td>
+            <td>84%</td>
+            <td>82%</td>
+            <td>87%</td>
+            <td>84%</td>
+        </tr>
+        <tr>
+            <td>Neural Networks</td>
+            <td>87%%</td>
+            <td>83%</td>
+            <td>92%</td>
+            <td>88%</td>
+        </tr>
+
+    </tbody>
+    
+</table>
+<h3>Key Findings</h3>
+<h4>Significant Financial Ratios Identified:</h4>
+<ul><li>Current Ratio</li><li> Debt-to-Equity Ratio</li><li> Return on Assets
+</li>
+</ul>
+<h4>Best-Performing Models:</h4>
+<ul><li>Random Forest: 93% accuracy.</li><li>Neural Networks: 87% accuracy, high recall for bankruptcy detection.
+</li></ul>
+<h4>Insights:
+</h4>
+<ul><li>Ensemble models outperformed simpler algorithms.
+</li><li>Balanced datasets improved predictive performance.
+</li></ul>
+<h2>Conclusion</h2>
+<ul><li>Financial ratios are essential tools for bankruptcy prediction.
+</li><li>Machine learning models enhance prediction accuracy, offering early warning signals to stakeholders.
+</li><li>Integrating additional data sources and improving model transparency will further improve the field.
+</li></ul>
+</div>
+</body>
+</html>

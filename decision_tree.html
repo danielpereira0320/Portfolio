@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Decision Trees v/s Random Forest</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet" />
+<style>
+table {
+    border-collapse: collapse;
+    width: 60%;
+    margin: 20px 0;
+    font-family: Arial, sans-serif;
+}
+th, td {
+    border: 1px solid #888;
+    padding: 8px 12px;
+    text-align: center;
+}
+caption {
+    margin-bottom: 10px;
+    font-size: 1.2em;
+}
+thead th {
+    background-color: #f0f0f0;
+}
+
+body {
+margin: 0;
+padding: 2rem;
+font-family: 'Inter', sans-serif;
+background: #fafafa;
+color: #222;
+}
+.container {
+max-width: 900px;
+margin: auto;
+}
+.back-btn {
+display: inline-block;
+margin-bottom: 2rem;
+padding: 0.6rem 1.2rem;
+background: #eee;
+border-radius: 8px;
+text-decoration: none;
+color: #333;
+font-weight: 500;
+transition: background 0.2s;
+}
+.back-btn:hover {
+background: #ddd;
+}
+h1 {
+font-size: 2.2rem;
+margin-bottom: 1rem;
+}
+p {
+line-height: 1.6;
+font-size: 1.1rem;
+}
+img {
+width: 100%;
+border-radius: 10px;
+margin: 1.5rem 0;
+}
+</style>
+</head>
+<body>
+<div class="container">
+<a href="index.html" class="back-btn">← Back to Portfolio</a>
+
+
+<h1>Decision Trees v/s Random Forest</h1>
+<p>A group presentation conducted to discuss the difference between Decision Trees and Random Forests. For the analysis, we used three datasets have different features and compared the two algoirthms on each dataset in terms of accuracy and execution time.</p>
+
+
+<img src="resources/dt_v_rf.png" alt="Project Screenshot" />
+
+
+<h2>Code</h2>
+<p><a href="https://colab.research.google.com/drive/1r0byIyB3T84oTRkp0r-ru0TsxcBRxkto?usp=sharing">Link to the Google Colab Notebook</a></p>
+<h2>Results</h2>
+<table>
+    <caption><strong>Decision Tree Evaluation</strong></caption>
+    <thead>
+        <tr>
+            <th>Dataset</th>
+            <th>Accuracy</th>
+            <th>Execution Time</th>
+            <th>Unique Features</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Wine</td>
+            <td>92%</td>
+            <td>0.014 sec</td>
+            <td>Highly Cleaned</td>
+        </tr>
+        <tr>
+            <td>Heart Disease</td>
+            <td>80%</td>
+            <td>0.012 sec</td>
+            <td>Small Dataset</td>
+        </tr>
+        <tr>
+            <td>Water Quality</td>
+            <td>93%</td>
+            <td>0.060 sec</td>
+            <td>High Dimensionality</td>
+        </tr>
+        <tr>
+            <td><strong>Total</strong></td>
+            <td><strong>88.33%</strong></td>
+            <td>0.086 sec</td>
+            <td></td>
+        </tr>
+    </tbody>
+</table>
+<br>
+<table>
+    <caption><strong>Random Forest Evaluation</strong></caption>
+    <thead>
+        <tr>
+            <th>Dataset</th>
+            <th>Accuracy</th>
+            <th>Execution Time</th>
+            <th>Unique Features</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Wine</td>
+            <td>96%</td>
+            <td>0.315 sec</td>
+            <td>Highly Cleaned</td>
+        </tr>
+        <tr>
+            <td>Heart Disease</td>
+            <td>86%</td>
+            <td>0.208 sec</td>
+            <td>Small Dataset</td>
+        </tr>
+        <tr>
+            <td>Water Quality</td>
+            <td>94%</td>
+            <td>1.187 sec</td>
+            <td>High Dimensionality</td>
+        </tr>
+        <tr>
+            <td><strong>Total</strong></td>
+            <td><strong>92%</strong></td>
+            <td>1.71 sec</td>
+            <td></td>
+        </tr>
+    </tbody>
+</table>
+
+<br>
+<h2>Conclusion</h2>
+<table>
+    <thead>
+        <th>Decision Tree</th>
+        <th>Random Forest</th>
+    </thead>
+    <tbody>
+<tr>
+    <td>
+        A decision tree is a tree-like model of decisions along with possible outcomes in a diagram.
+    </td>
+    <td>A classification algorithm consisting of many decision trees combined to get a more accurate result as compared to a single tree.</td>
+</tr>
+<tr>
+    <td>There is always a scope for overfitting, caused due to the presence of variance.</td>
+    <td>Random forest algorithm avoids and preventsoverfitting by using multiple trees.</td>
+</tr>
+<tr>
+    <td>The results are less accurate.</td>
+    <td>This gives accurate and precise results.</td>
+</tr>
+<tr>
+    <td>Decision trees require low computation, thus reducing time to implement and carrying low accuracy.</td>
+    <td>This consumes more computation. The process of generation and analyzing is time-consuming.</td>
+</tr>
+<tr>
+    <td>It is easy to visualize. The only task is to fit the decision tree model.</td>
+    <td>This has complex visualization as it determines the pattern behind the data.</td>
+</tr>
+
+    </tbody>
+</table>
+</div>
+</body>
+</html>
